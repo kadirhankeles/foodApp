@@ -9,24 +9,26 @@ class loginButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        height: 63,
-        width: 360,
-        child: TextButton(
-          onPressed: (() {}),
-          child: Center(
-              child: Text(
-            'Login',
-            style: TextStyle(color: Color(0xffF5F5F5), fontSize: 29),
-          )),
-        ),
-        margin: EdgeInsets.only(left: 18, right: 18),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            color: Color(0xff010E16),
-            border: Border.all(width: 1, color: Color(0xff314B61))),
-      ),
+    return Column(
+      children: [
+        Container(
+            height: 63,
+            width: double.infinity,
+            child: TextButton(
+              onPressed: (() {}),
+              child: Center(
+                  child: Text(
+                'Login',
+                style: TextStyle(color: Color(0xffF5F5F5), fontSize: 29),
+              )),
+            ),
+            margin: EdgeInsets.only(left: 18, right: 18),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Color(0xff010E16),
+                border: Border.all(width: 1, color: Color(0xff314B61))),
+          ),
+      ],
     );
   }
 }
