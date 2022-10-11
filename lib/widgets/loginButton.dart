@@ -5,7 +5,10 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class loginButton extends StatelessWidget {
-  const loginButton({super.key});
+  final String buttonText;
+  final Color buttonColor;
+
+  loginButton({super.key, required this.buttonText, required this.buttonColor,});
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +21,8 @@ class loginButton extends StatelessWidget {
               onPressed: (() {}),
               child: Center(
                   child: Text(
-                'Login',
-                style: TextStyle(color: Color(0xffF5F5F5), fontSize: 29),
+                buttonText,
+                style: TextStyle(color: buttonColor, fontSize: 29),
               )),
             ),
             margin: EdgeInsets.only(left: 18, right: 18),
