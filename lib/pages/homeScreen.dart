@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:foodapplication/widgets/banner.dart';
 import 'package:foodapplication/widgets/categories.dart';
+import 'package:foodapplication/widgets/navbar.dart';
 import 'package:foodapplication/widgets/restaurant.dart';
 import 'package:foodapplication/widgets/searchBar.dart';
 import 'package:foodapplication/widgets/userLocation.dart';
@@ -162,9 +163,11 @@ class _homeScreenState extends State<homeScreen> {
                 },
               ),
             ),
+            
           ],
         ),
       ),
+      bottomNavigationBar: navBar(),
     );
   }
 }
