@@ -14,23 +14,15 @@ class categories extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: 69,
-          width: 69,
+          height: 67,
+          width: 67,
           decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage(categoriesImage)),
+              image: DecorationImage(image: AssetImage(categoriesImage),fit: BoxFit.cover),
               shape: BoxShape.circle,
-              boxShadow: <BoxShadow>[
-                BoxShadow(
-                  color: Colors.grey,
-                  offset: Offset(0.0, 0.0),
-                  blurRadius: 10.0,
-                ),
-              ],
+              
               ),
         ),
-        SizedBox(
-          height: 10,
-        ),
+        SizedBox(height: 7,),
         Text('$categoriesName')
       ],
     );
