@@ -9,8 +9,9 @@ class restaurant extends StatelessWidget {
   final double restaurantStar;
   final String restaurantTime;
   final String restaurantDistance;
+  final bool isNew;
 
-  restaurant({super.key, required this.restaurantImage, required this.restaurantName, required this.restaurantStar, required this.restaurantTime, required this.restaurantDistance});
+  restaurant({super.key, required this.restaurantImage, required this.restaurantName, required this.restaurantStar, required this.restaurantTime, required this.restaurantDistance, required this.isNew});
 
   @override
   Widget build(BuildContext context) {
@@ -74,7 +75,7 @@ class restaurant extends StatelessWidget {
         child: Container(
         width: 55,
         height: 30,
-        decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.only(topRight: Radius.circular(20), bottomLeft: Radius.circular(20))),
+        decoration: BoxDecoration(color: isNew==true? Colors.black: Colors.white, borderRadius: BorderRadius.only(topRight: Radius.circular(20), bottomLeft: Radius.circular(20))),
         child: Center(child: Text('New', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),)),
       ))
       ],
