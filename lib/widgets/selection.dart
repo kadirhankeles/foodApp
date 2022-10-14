@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/framework.dart';
 
 class selectionFood extends StatefulWidget {
   final String food;
+  
   const selectionFood({super.key, required this.food});
 
   @override
