@@ -30,7 +30,7 @@ class _topPhotoState extends State<topPhoto> {
             child: IconButton(
               padding: EdgeInsets.zero,
               onPressed: () {
-              
+              Navigator.of(context).pop();
             }, icon: Icon(Icons.keyboard_arrow_left, color: Colors.white,)),
           ),
           Container(

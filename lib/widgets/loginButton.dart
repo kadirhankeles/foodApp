@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:foodapplication/pages/homeScreen.dart';
 
 class loginButton extends StatelessWidget {
   final String buttonText;
@@ -18,7 +19,9 @@ class loginButton extends StatelessWidget {
             height: 63,
             width: double.infinity,
             child: TextButton(
-              onPressed: (() {}),
+              onPressed: (() {
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>homeScreen()));
+              }),
               child: Center(
                   child: Text(
                 buttonText,

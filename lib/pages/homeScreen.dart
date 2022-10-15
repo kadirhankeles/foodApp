@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:foodapplication/pages/restaurantScreen.dart';
 import 'package:foodapplication/widgets/banner.dart';
 import 'package:foodapplication/widgets/categories.dart';
 import 'package:foodapplication/widgets/navbar.dart';
@@ -149,17 +150,22 @@ class _homeScreenState extends State<homeScreen> {
                 physics: ScrollPhysics(),
                 itemCount: restaurantImage.length,
                 itemBuilder: (context, index) {
-                  return Container(
-                      margin: index > 0
-                          ? EdgeInsets.only(top: 20)
-                          : EdgeInsets.only(top: 0),
-                      child: restaurant(
-                          restaurantImage: restaurantImage[index],
-                          restaurantName: restaurantName[index],
-                          restaurantStar: restaurantStar[index],
-                          restaurantTime: restaurantTime[index],
-                          restaurantDistance: restaurantDistance[index],
-                          isNew: isNew[index]));
+                  return GestureDetector(
+                    child: Container(
+                        margin: index > 0
+                            ? EdgeInsets.only(top: 20)
+                            : EdgeInsets.only(top: 0),
+                        child: restaurant(
+                            restaurantImage: restaurantImage[index],
+                            restaurantName: restaurantName[index],
+                            restaurantStar: restaurantStar[index],
+                            restaurantTime: restaurantTime[index],
+                            restaurantDistance: restaurantDistance[index],
+                            isNew: isNew[index])),
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>restaurantScreen()));
+                  },
+                  );
                 },
               ),
             ),
